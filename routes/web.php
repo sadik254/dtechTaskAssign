@@ -5,9 +5,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaskController;
 
-// Route::get('/', function () {
-//     return redirect('/users');
-// })->middleware('auth');
+// Redirecting the root/home to users
+Route::get('/', function () {
+    return redirect('/users');
+})->middleware('auth');
 
 // Authentication Routes
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
