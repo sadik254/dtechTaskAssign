@@ -8,8 +8,8 @@
         @endif
         <!-- Replace the backend download button -->
         <button id="download-csv" class="btn btn-primary mb-3">Download CSV</button>
-        
-        <table class="table" id="task-table">
+        <div style="overflow-x: auto; white-space: nowrap;">
+        <table class="table" id="task-table" white-space: nowrap>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -18,12 +18,12 @@
                     <th>Phone</th>
                     <th>City</th>
                     <th>Address</th>
-                    <th>Appointment Date</th>
-                    <th>Appointment Time</th>
-                    <th>Quality Report</th>
-                    <th>Google Maps</th>
-                    <th>Recording Link</th>
-                    <th>Perfect Pitch</th>
+                    <th style="white-space: nowrap;">Appointment Date</th>
+                    <th style="white-space: nowrap;">Appointment Time</th>
+                    <th style="white-space: nowrap;">Quality Report</th>
+                    <th style="white-space: nowrap;">Google Maps</th>
+                    <th style="white-space: nowrap;">Recording Link</th>
+                    <th style="white-space: nowrap;">Perfect Pitch</th>
                     <th>Assignee</th>
                     <th>Comment</th>
                     <th>Actions</th>
@@ -66,6 +66,7 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
         {{ $tasks->links() }}
     </div>
 @endsection
